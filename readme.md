@@ -9,4 +9,9 @@ x-pub-client-2.py
 x-pub-client.py
 x-pub-monitor.py
 
-zhelpers.py: helper class
+Firstly, you start the x-pub-monitor.py,
+then you can start x-pub-client.py, and x-pub-client2.py, and you will see that the two process will subscribed the same messages.
+For easier comparison, I suggest to view the message recieving process in two vertical panel in tmux (http://tmux.sourceforge.net/):
+In tmux, press Ctrl+B,% to split the screen vertically. Then Ctrl+B+Left, Ctrl+B+Right to swith the two panel.
+You can start x-pub-client.py in the left panel of tmux, and x-pub-client-2.py in the right panel.
+ 
