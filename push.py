@@ -9,4 +9,4 @@ sock.bind(sys.argv[1])
 
 while True:
     print('sending msg')
-    sock.send(sys.argv[1] + ':' + time.ctime())
+    sock.send(sys.argv[1] + ':' + time.ctime())  ### will block until pull client ready
