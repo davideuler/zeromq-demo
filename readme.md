@@ -25,4 +25,20 @@ For easier comparison, I suggest to view the message recieving process in two ve
 In tmux, press Ctrl+B,% to split the screen vertically. Then Ctrl+B+Left, Ctrl+B+Right to swith the two panel.
 
 You can start x-pub-client.py in the left panel of tmux, and x-pub-client-2.py in the right panel.
- 
+## push/pull demo
+push.py
+pull.py
+
+
+client和server是对等的，就是说可以在push侧bind，也可以在client侧bind，服务器端bind,客户端connect。
+对于push/pull pattern，bind的socket会阻塞，直到客户端ready。
+
+TCP使用示例:
+对于TCP协议, server的一侧，服务器名要用星号*:
+python push.py "tcp://localhost:3100”
+python pull.py "tcp://*:3100"
+
+IPC使用示例:
+
+python push.py "ipc://name1:5678"
+python pull.py "ipc://name1:5678"  
