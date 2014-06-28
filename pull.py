@@ -4,7 +4,7 @@ import sys
 
 ctx = zmq.Context()
 s = ctx.socket(zmq.PULL)
-s.connect(sys.argv[1])
+s.bind(sys.argv[1])
 while True:
     msg = s.recv()
     print 'Got msg:', msg 
